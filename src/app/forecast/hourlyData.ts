@@ -1,4 +1,4 @@
-export class Currently {
+export class HourlyData {
   public time: string;
   public summary: string;
   public icon: string;
@@ -14,9 +14,8 @@ export class Currently {
   public windGust: number;
   public pressure: number;
   public cloudCover: number;
-  public ozone: number;
   public uvIndex: number;
+  public ozone: number;
   public visibility: number;
-  public nearestStormBearing: number;
-  public nearestStormDistance: number;
+  public precipAccumulation: number;
 }

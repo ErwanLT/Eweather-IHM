@@ -1,4 +1,5 @@
 import {Currently} from './currently';
+import {Hourly} from './hourly';
 
 export class Forecast {
 
@@ -7,6 +8,7 @@ export class Forecast {
   public timezone: string;
   public location: string;
   public currently: Currently;
+  public hourly: Hourly;
 
   constructor();
 
@@ -17,12 +19,14 @@ export class Forecast {
       this.timezone = obj.timezone || '';
       this.location = obj.location || '';
       this.currently = obj.currently;
+      this.currently = obj.hourly;
     } else {
       this.latitude = 0;
       this.longitude = 0;
       this.timezone = '';
       this.location = '';
       this.currently = new Currently();
+      this.hourly = new Hourly();
     }
 
   }

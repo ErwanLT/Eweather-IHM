@@ -34,6 +34,7 @@ export class AppComponent {
 
     this.httpClient.get<Forecast>(this.url, optionRequete).subscribe((response) => {
       this.forecast = response;
+      this.model.location = '';
       this.display = true;
     });
   }

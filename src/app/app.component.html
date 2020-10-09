@@ -28,7 +28,7 @@
               <img src='{{ "/assets/img/weatherIcon/" + forecast.currently.icon + ".png" }}' class="img-small"/>
               {{forecast.location}}
               <br>
-              {{forecast.currently.summary}}
+              {{forecast.hourly.summary}}
             </p>
           </div>
         </div>
@@ -36,10 +36,101 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <mat-tab-group>
+        <mat-tab label="Currently">
+          <div class="row">
+            <div class="col-md-2 mb-4"></div>
+            <div class="col-md-8 mb-4">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img src='{{ "/assets/img/weatherIcon/" + forecast.currently.icon + ".png" }}' class="img-big"/>
+                  </div>
+                  <div class="col col-lg-8">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm">
+                          {{forecast.currently.temperature}}°C
+                        </div>
+                        <div class="col-sm">
+                          {{forecast.currently.summary}}
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col">
+                          <span class="bold-span">Ressentie:</span>
+                          {{forecast.currently.apparentTemperature}}°C
+                        </div>
+                        <div class="col">
+                          <span class="bold-span">Couverture Nuageuse:</span>
+                          {{forecast.currently.cloudCover}}%
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col">
+                          <span class="bold-span">Vent:</span>
+                          {{forecast.currently.windSpeed}}Km/h
+                        </div>
+                        <div class="col">
+                          <span class="bold-span">Pluie:</span>
+                          {{forecast.currently.precipIntensity}}mm
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col">
+                          <span class="bold-span">indice UV:</span>
+                          <span *ngIf="forecast.currently.uvIndex <= 2" class="uv-low">
+                            {{forecast.currently.uvIndex}}
+                          </span>
+                          <span *ngIf="forecast.currently.uvIndex > 2 && forecast.currently.uvIndex <= 5" class="uv-moderate">
+                            {{forecast.currently.uvIndex}}
+                          </span>
+                          <span *ngIf="forecast.currently.uvIndex > 5 && forecast.currently.uvIndex <= 7" class="uv-hight">
+                            {{forecast.currently.uvIndex}}
+                          </span>
+                          <span *ngIf="forecast.currently.uvIndex > 7 && forecast.currently.uvIndex <=10" class="uv-very-hight">
+                            {{forecast.currently.uvIndex}}
+                          </span>
+                          <span *ngIf="forecast.currently.uvIndex > 10" class="uv-extrem">
+                            {{forecast.currently.uvIndex}}
+                          </span>
+                        </div>
+                        <div class="col">
+                          <span class="bold-span">Visibilité:</span>
+                          {{forecast.currently.visibility}}+km
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col">
+                          <span class="bold-span">Pression: </span>
+                          {{forecast.currently.pressure}}hPa
+                        </div>
+                        <div class="col">
+                          <span class="bold-span">Humidité: </span>
+                          {{forecast.currently.humidity}}%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 mb-4"></div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Hourly"> {{forecast.hourly.summary}} </mat-tab>
+        <mat-tab label="Daily"> Content 3 </mat-tab>
+      </mat-tab-group>
+    </div>
+
   </div>
 </body>
-
-<app-eweather-ihm></app-eweather-ihm>
 
 <footer class="page-footer">
 
