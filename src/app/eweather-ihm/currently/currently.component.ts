@@ -7,11 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrentlyComponent implements OnInit {
 
-  appareilName: string = 'machine a laver';
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

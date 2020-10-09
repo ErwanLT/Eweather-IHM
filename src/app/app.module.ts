@@ -7,16 +7,15 @@ import { EweatherIhmComponent } from './eweather-ihm/eweather-ihm.component';
 import { CurrentlyComponent } from './eweather-ihm/currently/currently.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormComponent } from './form/form.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     EweatherIhmComponent,
     CurrentlyComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatTabsModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,2 +1,71 @@
-<app-form></app-form>
+<header>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">EWeather</a>
+    <div>
+      <form (ngSubmit)="onSubmit(model.location)" #locationForm="ngForm">
+        <div class="form-inline">
+          <div class="md-form my-0">
+            <input type="text" class="form-control" id="location"
+                   required
+                   [(ngModel)]="model.location" name="location">
+          </div>
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0" [disabled]="!locationForm.form.valid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div *ngIf="display">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 mb-4">
+        </div>
+        <div class="col-md-8 mb-4">
+          <div class="info">
+            <p class="location" colspan="3">
+              <img src='{{ "/assets/img/weatherIcon/" + forecast.currently.icon + ".png" }}' class="img-small"/>
+              {{forecast.location}}
+              <br>
+              {{forecast.currently.summary}}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 mb-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 <app-eweather-ihm></app-eweather-ihm>
+
+<footer class="page-footer">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a aria-label="Erwan Le Tutour on twitter" target="_blank" rel="noopener" href="https://twitter.com/ErwanLeTutour" title="Twitter">
+          <i class='fab fa-twitter'></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/erwan-le-tutour-32904972/">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018-2020 Copyright:
+    <a href="https://github.com/ErwanLT/"><i class="fab fa-github"></i> Erwan Le Tutour</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
