@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Forecast} from '../../forecast/forecast';
 
 @Component({
-  selector: 'app-currently',
-  templateUrl: './currently.component.html',
-  styleUrls: ['./currently.component.scss']
+  selector: 'app-hourly',
+  templateUrl: './hourly.component.html',
+  styleUrls: ['./hourly.component.scss']
 })
-export class CurrentlyComponent implements OnInit {
+export class HourlyComponent implements OnInit {
 
   constructor() { }
 
@@ -14,4 +14,5 @@ export class CurrentlyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
