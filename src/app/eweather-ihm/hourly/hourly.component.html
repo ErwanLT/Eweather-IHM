@@ -17,10 +17,10 @@
           <mat-expansion-panel-header>
             <mat-panel-title>
               <img src='{{ "/assets/img/weatherIcon/" + hourlyData.icon + ".png" }}' class="img-small"/>
-              <a data-toggle="collapse" href="#hour{{hourlyData.time}}">{{hourlyData.time | date:'HH \'h\' dd/MM'}}</a>
+             {{hourlyData.time | date:'HH \'h\' dd/MM'}}
             </mat-panel-title>
             <mat-panel-description>
-              <span> {{hourlyData.summary}} </span>
+              <span class="bold-span"> {{hourlyData.summary}} </span>
             </mat-panel-description>
           </mat-expansion-panel-header>
           <div class="container">

@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Forecast} from '../../forecast/forecast';
+import {L} from '@angular/cdk/keycodes';
+import {latLng, tileLayer} from 'leaflet';
 
 @Component({
   selector: 'app-currently',
@@ -12,6 +14,9 @@ export class CurrentlyComponent implements OnInit {
 
   @Input() forecast: Forecast;
 
+  @Input() options: any;
+
   ngOnInit(): void {
   }
+
 }

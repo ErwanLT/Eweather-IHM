@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HourlyComponent } from './eweather-ihm/hourly/hourly.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HourlyComponent } from './eweather-ihm/hourly/hourly.component';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]

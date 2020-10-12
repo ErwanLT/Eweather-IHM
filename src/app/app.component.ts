@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {LocationForm} from './form/form';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Forecast} from './forecast/forecast';
+import {latLng, tileLayer} from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -21,12 +22,14 @@ export class AppComponent {
 
   forecast = new Forecast();
 
+  options = {};
+
   onSubmit(f) {
     console.log(this.url + f);
 
     const optionRequete = {
       headers: new HttpHeaders({
-        'Access-Control-Allow-Origin':'*'
+        'Access-Control-Allow-Origin': '*'
       }),
       params: new HttpParams()
         .set('location', f)
@@ -36,6 +39,16 @@ export class AppComponent {
       this.forecast = response;
       this.model.location = '';
       this.display = true;
+
+      this.options = {
+        layers: [
+          tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          })
+        ],
+        zoom: 7,
+        center: latLng(this.forecast.latitude, this.forecast.longitude)
+      };
     });
   }
 }
