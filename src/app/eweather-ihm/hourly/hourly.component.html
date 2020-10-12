@@ -17,7 +17,7 @@
           <mat-expansion-panel-header>
             <mat-panel-title>
               <img src='{{ "/assets/img/weatherIcon/" + hourlyData.icon + ".png" }}' class="img-small"/>
-             {{hourlyData.time | date:'HH \'h\' dd/MM'}}
+             {{hourlyData.time*1000 | date:'HH\'h\' dd/MM'}}
             </mat-panel-title>
             <mat-panel-description>
               <span class="bold-span"> {{hourlyData.summary}} </span>

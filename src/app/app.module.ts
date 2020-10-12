@@ -13,13 +13,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HourlyComponent } from './eweather-ihm/hourly/hourly.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { DailyComponent } from './eweather-ihm/daily/daily.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EweatherIhmComponent,
     CurrentlyComponent,
-    HourlyComponent
+    HourlyComponent,
+    DailyComponent
   ],
   imports: [
     BrowserModule,

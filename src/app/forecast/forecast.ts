@@ -1,5 +1,6 @@
 import {Currently} from './currently';
 import {Hourly} from './hourly';
+import {Daily} from './daily';
 
 export class Forecast {
 
@@ -9,6 +10,7 @@ export class Forecast {
   public location: string;
   public currently: Currently;
   public hourly: Hourly;
+  public daily: Daily;
 
   constructor();
 
@@ -19,7 +21,8 @@ export class Forecast {
       this.timezone = obj.timezone || '';
       this.location = obj.location || '';
       this.currently = obj.currently;
-      this.currently = obj.hourly;
+      this.hourly = obj.hourly;
+      this.daily = obj.daily;
     } else {
       this.latitude = 0;
       this.longitude = 0;
@@ -27,6 +30,7 @@ export class Forecast {
       this.location = '';
       this.currently = new Currently();
       this.hourly = new Hourly();
+      this.daily = new Daily();
     }
 
   }
