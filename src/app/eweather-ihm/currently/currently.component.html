@@ -86,7 +86,9 @@
   <div class="col-md-8 mb-4">
     <div style="height: 300px;"
          leaflet
-         [leafletOptions]="options">
+         (leafletMapReady)="onMapReady($event)"
+         [leafletOptions]="options"
+         [leafletLayersControl]="layersControl">
     </div>
   </div>
   <div class="col-md-2 mb-4"></div>

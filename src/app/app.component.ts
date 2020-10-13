@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LocationForm} from './form/form';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Forecast} from './forecast/forecast';
-import {latLng, tileLayer} from 'leaflet';
+import {circle, latLng, polygon, tileLayer} from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -41,7 +41,6 @@ export class AppComponent implements OnInit{
 
         this.httpClient.get<Forecast>(url, optionRequete).subscribe((response) => {
           this.forecast = response;
-          this.model.location = '';
           this.display = true;
 
           this.options = {
