@@ -17,6 +17,10 @@
 </header>
 
 <body>
+  <div *ngIf="!display">
+    <app-help></app-help>
+  </div>
+
   <div *ngIf="display">
     <div class="container">
       <div class="row">

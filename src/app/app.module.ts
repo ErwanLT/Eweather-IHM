@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HourlyComponent } from './eweather-ihm/hourly/hourly.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { DailyComponent } from './eweather-ihm/daily/daily.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DailyComponent } from './eweather-ihm/daily/daily.component';
     EweatherIhmComponent,
     CurrentlyComponent,
     HourlyComponent,
-    DailyComponent
+    DailyComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
