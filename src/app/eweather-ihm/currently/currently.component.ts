@@ -19,10 +19,10 @@ export class CurrentlyComponent implements OnInit {
       'Open Street Map': tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' }),
     },
     overlays: {
-      'Temperature': tileLayer('https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=931ae6314b44bbd4f20fc59acbe499df'),
-      'Nuages': tileLayer('https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=931ae6314b44bbd4f20fc59acbe499df'),
-      'Pluie': tileLayer('https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=931ae6314b44bbd4f20fc59acbe499df'),
-      'Vent': tileLayer('https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=931ae6314b44bbd4f20fc59acbe499df')
+      'Temperature': tileLayer('https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=' + environment.appid),
+      'Nuages': tileLayer('https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=' + environment.appid),
+      'Pluie': tileLayer('https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=' + environment.appid),
+      'Vent': tileLayer('https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=' + environment.appid)
     }
   };
 
