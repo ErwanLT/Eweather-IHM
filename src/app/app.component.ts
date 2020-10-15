@@ -3,6 +3,7 @@ import {LocationForm} from './form/form';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Forecast} from './forecast/forecast';
 import {circle, latLng, polygon, tileLayer} from 'leaflet';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit{
   constructor(private httpClient: HttpClient) {
   }
 
+  version = environment.version;
 
   model = new LocationForm('');
 

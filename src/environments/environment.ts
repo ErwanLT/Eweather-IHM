@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appid : '931ae6314b44bbd4f20fc59acbe499df'
+  appid : 'OTMxYWU2MzE0YjQ0YmJkNGYyMGZjNTlhY2JlNDk5ZGY=',
+  version: '4.0'
 };
 
 /*
