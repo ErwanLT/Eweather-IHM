@@ -26,13 +26,13 @@
 <app-map *ngIf="forecast" [forecast]="forecast"></app-map>
 
 <mat-tab-group>
-  <mat-tab label="Currently">
+  <mat-tab label="Actuellement">
     <app-currently *ngIf="currently" [currently]="currently"></app-currently>
   </mat-tab>
-  <mat-tab label="Hourly">
+  <mat-tab label="Heure par heure">
     <app-hourly *ngIf="hourly" [hourly]="hourly"></app-hourly>
   </mat-tab>
-  <mat-tab label="Daily">
+  <mat-tab label="Jour par jour">
     <app-daily *ngIf="daily" [daily]="daily"></app-daily>
   </mat-tab>
 </mat-tab-group>
