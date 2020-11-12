@@ -2,7 +2,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <span class="bold-span">{{forecast.hourly.summary}}</span>
+    <span class="bold-span">{{hourly.summary}}</span>
   </div>
   <div class="col-md-2">
   </div>
@@ -11,13 +11,13 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <div *ngFor="let hourlyData of forecast.hourly.data">
+    <div *ngFor="let hourlyData of hourly.data">
       <mat-accordion>
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>
             <mat-panel-title>
               <img src='{{ "/assets/img/weatherIcon/" + hourlyData.icon + ".png" }}' class="img-small"/>
-             {{hourlyData.time*1000 | date:'HH\'h\' dd/MM'}}
+              {{hourlyData.time*1000 | date:'HH\'h\' dd/MM'}}
             </mat-panel-title>
             <mat-panel-description>
               <span class="bold-span"> {{hourlyData.summary}} </span>
