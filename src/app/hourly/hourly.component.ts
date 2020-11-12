@@ -1,16 +1,16 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Forecast} from '../../forecast/forecast';
+import {Hourly} from '../models/hourly';
 
 @Component({
   selector: 'app-hourly',
   templateUrl: './hourly.component.html',
-  styleUrls: ['./hourly.component.scss']
+  styleUrls: ['./hourly.component.css']
 })
 export class HourlyComponent implements OnInit {
 
-  constructor() { }
+  @Input() hourly: Hourly;
 
-  @Input() forecast: Forecast;
+  constructor() { }
 
   ngOnInit(): void {
   }

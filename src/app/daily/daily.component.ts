@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Forecast} from '../../forecast/forecast';
+import {Daily} from '../models/daily';
 
 @Component({
   selector: 'app-daily',
   templateUrl: './daily.component.html',
-  styleUrls: ['./daily.component.scss']
+  styleUrls: ['./daily.component.css']
 })
 export class DailyComponent implements OnInit {
 
-  @Input()forecast: Forecast;
+  @Input() daily: Daily;
 
   constructor() { }
 

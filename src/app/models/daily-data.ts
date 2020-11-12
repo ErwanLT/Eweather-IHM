@@ -1,4 +1,4 @@
-export class DailyData{
+export class DailyData {
   public time: string;
   public  summary: string;
   public  icon: string;

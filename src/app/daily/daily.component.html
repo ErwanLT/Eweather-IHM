@@ -2,7 +2,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <span class="bold-span">{{forecast.daily.summary}}</span>
+    <span class="bold-span">{{daily.summary}}</span>
   </div>
   <div class="col-md-2">
   </div>
@@ -11,7 +11,7 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <div *ngFor="let dailyData of forecast.daily.data">
+    <div *ngFor="let dailyData of daily.data">
       <mat-accordion>
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>

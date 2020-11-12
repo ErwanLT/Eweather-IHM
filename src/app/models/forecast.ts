@@ -3,7 +3,6 @@ import {Hourly} from './hourly';
 import {Daily} from './daily';
 
 export class Forecast {
-
   public latitude: number;
   public longitude: number;
   public timezone: string;
@@ -34,5 +33,4 @@ export class Forecast {
     }
 
   }
-
 }

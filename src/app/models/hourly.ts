@@ -1,6 +1,6 @@
-import {HourlyData} from './hourlyData';
+import {HourlyData} from './hourly-data';
 
-export class Hourly{
+export class Hourly {
   public summary: string;
   public icon: string;
   public data: HourlyData[];
